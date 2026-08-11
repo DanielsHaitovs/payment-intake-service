@@ -38,7 +38,7 @@ export function buildApp(): FastifyInstance {
   const container = buildContainer();
 
   app.post('/payments', container.paymentController.createPayment);
-  // app.get('/payments', '');
+  app.get('/payments', container.paymentController.getPayments);
 
   return app;
 }

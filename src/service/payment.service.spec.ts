@@ -12,7 +12,6 @@ describe('PaymentService', () => {
   beforeEach(() => {
     mockRepository = {
       save: jest.fn(),
-      findByClientPaymentId: jest.fn(),
       findAll: jest.fn(),
     } as jest.Mocked<PaymentRepository>;
 

@@ -7,7 +7,7 @@ export class InMemoryPaymentRepository implements PaymentRepository {
   private readonly store = new Map<string, Payment>();
 
   async save(paymentData: CreatePayment): Promise<Payment> {
-    if (this.store.has(paymentData.paymentId)) {
+    if (!(await this.isUniquePaymentId(paymentData.paymentId))) {
       throw new ConflictException('Payment already exists.');
     }
 
@@ -22,8 +22,8 @@ export class InMemoryPaymentRepository implements PaymentRepository {
     return payment;
   }
 
-  async findByClientPaymentId(paymentId: string): Promise<Payment | null> {
-    return this.store.get(paymentId) || null;
+  private async isUniquePaymentId(paymentId: string): Promise<boolean> {
+    return !this.store.has(paymentId);
   }
 
   async findAll(): Promise<Payment[]> {

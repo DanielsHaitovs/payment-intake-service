@@ -13,4 +13,10 @@ export class PaymentController {
 
     return reply.status(HttpStatus.CREATED).send(payment);
   };
+
+  getPayments = async (_request: FastifyRequest, reply: FastifyReply): Promise<FastifyReply> => {
+    const data = await this.paymentService.getPayments();
+
+    return reply.status(HttpStatus.OK).send(data);
+  };
 }
