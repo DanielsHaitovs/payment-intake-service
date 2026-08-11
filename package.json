@@ -1,0 +1,32 @@
+{
+  "name": "payment-intake-service",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "type": "commonjs",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dev": "tsx watch src/index.ts",
+    "test": "jest",
+    "format": "prettier --write \"{src,test}/**/*.ts\""
+  },
+  "dependencies": {
+    "fastify": "^5.11.3",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.11.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.9.6",
+    "ts-jest": "^29.4.12",
+    "tsx": "^4.19.0",
+    "typescript": "^5.4.0"
+  },
+  "keywords": [],
+  "author": "Daniels Haitovs",
+  "license": "ISC",
+  "description": "Payment intake service that creates and retrieves payment records.",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
