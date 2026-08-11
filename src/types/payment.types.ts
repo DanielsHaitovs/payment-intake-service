@@ -1,6 +1,6 @@
-import { UUID } from 'crypto';
-import { createPaymentSchema } from '../schema/payment.schema';
-import z from 'zod';
+import type { UUID } from 'crypto';
+import type { createPaymentSchema } from '../schema/payment.schema';
+import { z } from 'zod';
 
 export type CurrencyCode = 'EUR' | 'USD' | 'GBP';
 
