@@ -1,6 +1,6 @@
 # payment-intake-service
 
-# Mindset
+## Mindset
 - design and create payment intake system with base techniques that can be swapped to real world app
 - no database, cache or any service or common design patterns. Mostly due to unclear real world use case and codebase where it potentially may end up. 
 
@@ -18,9 +18,9 @@
         - `reference`: optional string
 
 2. Get Payment
-    - Should return a list of created payment in order in what they were received
+    - Should return a list of created payments in order in what they were received
 
-# Technical stack:
+## Technical stack:
 - Typescript - engine
 - Fastify framework - router
 - Zod - validation
