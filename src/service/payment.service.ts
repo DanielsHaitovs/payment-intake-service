@@ -19,7 +19,7 @@ export class PaymentService {
       debtorIban: payment.debtorIban,
       creditorIban: payment.creditorIban,
       reference: payment.reference ?? null,
-      createdAt: payment.createdAt,
+      createdAt: payment.createdAt.toISOString(),
     };
   }
 }

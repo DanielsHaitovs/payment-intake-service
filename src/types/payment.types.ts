@@ -17,4 +17,7 @@ export interface Payment {
 
 export type CreatePayment = z.infer<typeof createPaymentSchema>;
 
-export type PaymentResponse = Payment;
+export interface PaymentResponse extends Omit<Payment, 'createdAt' | 'id'> {
+  id: string;
+  createdAt: string;
+}
