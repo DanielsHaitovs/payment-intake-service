@@ -13,5 +13,5 @@ export const createPaymentSchema = z.object({
   }),
   debtorIban: z.string().trim().regex(ibanRegex, 'invalid debtorIban format'),
   creditorIban: z.string().trim().regex(ibanRegex, 'invalid creditorIban format'),
-  reference: z.string().nullish(),
+  reference: z.string().nullish()
 });
