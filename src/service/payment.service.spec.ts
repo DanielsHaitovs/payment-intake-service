@@ -12,8 +12,9 @@ describe('PaymentService', () => {
   beforeEach(() => {
     mockRepository = {
       save: jest.fn(),
+      findByClientPaymentId: jest.fn(),
       findAll: jest.fn(),
-    } as unknown as jest.Mocked<PaymentRepository>;
+    } as jest.Mocked<PaymentRepository>;
 
     paymentService = new PaymentService(mockRepository);
     mockInternalId = randomUUID();
