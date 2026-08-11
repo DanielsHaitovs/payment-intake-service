@@ -12,8 +12,8 @@ export class InMemoryPaymentRepository implements PaymentRepository {
     }
 
     const payment: Payment = {
-      reference: null,
       ...paymentData,
+      reference: paymentData.reference ?? null,
       id: randomUUID(),
       createdAt: new Date(),
     };
