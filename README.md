@@ -30,7 +30,6 @@
   - Errors are captured globally in `app.ts` to avoid code duplication across current and future endpoints. Validation occurs at the controller level.
 - **Jest**: Testing framework.
 - **Prettier**: Code formatting.
-- **DI**: buildContainer used as dependency injection, which is clearly overkill, however current approach was added as reminder in case if app will grow to enterprise that it may require proper mechanism for dependency injection. 
 - **Dependency Injection (DI)**: A manual `buildContainer` setup is used. While slightly overkill for the current app, it serves as a placeholder. If the application scales to an enterprise level, this structure makes it easy to drop in a robust DI framework or specific design pattern.
 - **Custom Exceptions**: Implemented standard HTTP error classes (e.g., Bad Request, Not Found, Conflict) to ensure consistent and predictable API responses.
 
