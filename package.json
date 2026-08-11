@@ -1,5 +1,5 @@
 {
-  "name": "Payment intake service",
+  "name": "payment-intake-service",
   "version": "1.0.0",
   "main": "src/index.ts",
   "type": "commonjs",
