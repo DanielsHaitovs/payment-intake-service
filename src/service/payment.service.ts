@@ -1,5 +1,10 @@
 import { PaymentRepository } from '../repository/repository.interface';
-import { CreatePayment, Payment, PaymentResponse } from '../types/payment.types';
+import {
+  CreatePayment,
+  Payment,
+  PaymentListResponse,
+  PaymentResponse,
+} from '../types/payment.types';
 
 export class PaymentService {
   constructor(private readonly repository: PaymentRepository) {}
@@ -8,6 +13,14 @@ export class PaymentService {
     const saved = await this.repository.save(data);
 
     return this.mapToResponse(saved);
+  }
+
+  async getPayments(): Promise<PaymentListResponse> {
+    const payments = await this.repository.findAll();
+
+    return {
+      payments: payments.map((payment) => this.mapToResponse(payment)),
+    };
   }
 
   private mapToResponse(payment: Payment): PaymentResponse {

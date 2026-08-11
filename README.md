@@ -39,6 +39,7 @@
 - **Middleware / Interceptors / Hooks(Fastify)**: Overkill for this iteration, but ideal for intercepting, transforming or rejecting requests before they reach the service layer.
 - **Caching & Queues**: If a database is introduced later, a caching layer (like Redis) should be added to minimize direct database reads. Having Redis in the stack also allows for adding a background job broker (like BullMQ) for asynchronous payment processing if necessary.
 - **Path Aliases**: As the application grows, configuring TypeScript path aliases (e.g., `@common` or `@services`) would eliminate "dot-slash hell" (e.g., `../../../`) and significantly improve code readability and maintainability.
+- **Linter**: Adjust he linter rules to improve code quality, helps to develop large scale application and to not forget about basic things. 
 
 ## Setup & Running Locally
 

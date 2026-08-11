@@ -21,3 +21,7 @@ export interface PaymentResponse extends Omit<Payment, 'createdAt' | 'id'> {
   id: string;
   createdAt: string;
 }
+
+export interface PaymentListResponse {
+  payments: PaymentResponse[];
+}
