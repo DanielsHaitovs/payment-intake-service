@@ -4,7 +4,7 @@ import { randomUUID } from 'crypto';
 import { CreatePayment, PaymentResponse } from '../src/types/payment.types';
 
 export async function createPayment(
-  { app, payment }: { app: FastifyInstance; payment?: Partial<CreatePayment> } = { app: null! },
+  { app, payment }: { app: FastifyInstance; payment?: Partial<CreatePayment> },
 ): Promise<PaymentResponse> {
   const payload: CreatePayment = {
     paymentId: randomUUID(),
